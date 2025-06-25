@@ -128,18 +128,18 @@
       <source src="" type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.
     </video>
+    <div class="control-buttons">
+      <button onclick="cambiarVideo(-1)">Anterior</button>
+      <button onclick="cambiarVideo(1)">Siguiente</button>
+    </div>
     <p class="error-message" id="errorMsg">⚠️ Error al cargar el video. Intenta más tarde.</p>
     <p><a id="downloadLink" href="" download>Descarga el video</a></p>
     <h2 id="channelDescription">Películas infantiles</h2>
     <button id="toggleParagraphButton" aria-label="Mostrar u ocultar descripción">Mostrar/Ocultar Párrafo</button>
     <p id="movieDescription">En tu canal favorito, las mejores películas infantiles son aquellas que cautivan la imaginación y transmiten valiosas lecciones de vida de una manera divertida y emocionante...</p>
-    <div class="control-buttons">
-      <button onclick="cambiarVideo(-1)">Anterior</button>
-      <button onclick="cambiarVideo(1)">Siguiente</button>
     </div>
-  </div>
   <script>
-    const totalVideosPerDay = 3;
+    const totalVideosPerDay = 1;
     let currentDay = new Date().getDate();
     let currentIndex = parseInt(localStorage.getItem("videoIndex")) || 0;
     const videoPlayer = document.getElementById("videoPlayer");
