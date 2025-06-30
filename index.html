@@ -1,41 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prueba de Comerciales</title>
+  <title>Lumen - Agencia Creativa</title>
 
-  <!-- Google AdSense: script principal -->
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9592667071152832"
-          crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #f0c420;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f0c420;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #f0c420;
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d4a715;
+    }
+
     .ads-container {
-      margin-top: 40px;
+      margin: 3rem auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
-  <h1>Prueba de Comerciales</h1>
-  <p>Si ves un anuncio aquí, ¡todo funciona bien!</p>
+  <header>
+    <div class="logo">Lumen</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Impulsamos ideas con creatividad y tecnología</h1>
+    <p>Somos una agencia creativa que transforma visiones en experiencias digitales sorprendentes. Diseño, branding y desarrollo web, todo en uno.</p>
+    <a href="servicios.html"><button class="btn">Conócenos</button></a>
+  </section>
 
   <div class="ads-container">
-    <!-- Bloque de anuncio AdSense -->
+    <!-- Anuncio responsivo de AdSense -->
     <ins class="adsbygoogle"
-         style="display:inline-block;width:728px;height:90px"
-         data-ad-client="ca-pub-9592667071152832"
-         data-ad-slot="7247834932"></ins>
+      style="display:block"
+      data-ad-client="ca-pub-9592667071152832"
+      data-ad-slot="7247834932"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
     <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-</body>
-</html>
 
+  <footer>
+    © 2025 Lumen Agencia Creativa. Todos los derechos reservados.
+  </footer>
+</body>
+
+  </html>
