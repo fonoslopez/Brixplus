@@ -67,5 +67,67 @@ input, textarea {
   border-radius: 10px;
   font-size: 1rem;
   outline: none;
+}
 
-    
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0c420;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4a715;
+}
+
+.ads-container {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+}
+
+  </style>
+</head><body>
+  <header>
+    <div class="logo">Lumen</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>  <section class="section">
+    <h1>Contáctanos</h1>
+    <p>¿Tienes un proyecto en mente o quieres saber más? Escríbenos y te responderemos pronto.</p><form action="#" method="post">
+  <input type="text" name="nombre" placeholder="Tu nombre" required />
+  <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+  <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+  <button type="submit">Enviar mensaje</button>
+</form>
+
+  </section>  <div class="ads-container">
+    <!-- Anuncio responsivo de AdSense -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9592667071152832"
+      data-ad-slot="7247834932"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>  <footer>
+    © 2025 Lumen Agencia Creativa. Todos los derechos reservados.
+  </footer>
+</body></html>
