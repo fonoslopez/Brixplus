@@ -71,12 +71,21 @@
       margin-top: 2rem;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 1rem;
       border: none;
       border-radius: 10px;
       font-size: 1rem;
       outline: none;
+    }
+
+    textarea:invalid {
+      border: 2px solid #ff4d4d;
+    }
+
+    input:invalid {
+      border: 2px solid #ff4d4d;
     }
 
     button {
@@ -127,11 +136,13 @@
     <form action="https://formsubmit.co/el/januhu" method="POST">
       <input type="text" name="nombre" placeholder="Tu nombre" required />
       <input type="email" name="correo" placeholder="Tu correo electrónico" required />
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)" />
 
-      <!-- Seguridad y redirección -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://tusitio.github.io/gracias.html">
+      <textarea name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <!-- Configuración adicional -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://tusitio.github.io/gracias.html" />
 
       <button type="submit">Enviar mensaje</button>
     </form>
@@ -155,4 +166,4 @@
   </footer>
 </body>
 
-        </html>
+      </html>
