@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9592667071152832"
     crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -22,7 +21,10 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
-      line-height: 1.6;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -36,8 +38,8 @@
     .logo {
       font-size: 1.5rem;
       font-weight: 800;
-      letter-spacing: 2px;
       color: #f0c420;
+      letter-spacing: 2px;
     }
 
     nav a {
@@ -45,60 +47,39 @@
       text-decoration: none;
       color: #fff;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: #f0c420;
     }
 
-    .section {
+    main {
+      flex: 1;
       padding: 4rem 2rem;
-      max-width: 700px;
-      margin: auto;
-      text-align: center;
     }
 
-    .section h1 {
+    h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-top: 2rem;
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
-    input,
-    textarea {
-      padding: 1rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    textarea:invalid {
-      border: 2px solid #ff4d4d;
-    }
-
-    input:invalid {
-      border: 2px solid #ff4d4d;
-    }
-
-    button {
-      padding: 1rem;
-      border: none;
-      border-radius: 10px;
+    a.boton-contacto {
+      display: inline-block;
+      padding: 1rem 2rem;
       background-color: #f0c420;
-      font-weight: 600;
-      cursor: pointer;
+      color: #000;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    a.boton-contacto:hover {
       background-color: #d4a715;
     }
 
@@ -129,24 +110,11 @@
     </nav>
   </header>
 
-  <section class="section">
+  <main>
     <h1>Contáctanos</h1>
-    <p>¿Tienes un proyecto en mente o quieres saber más? Escríbenos y te responderemos pronto.</p>
-
-    <form action="https://formsubmit.co/el/januhu" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="correo" placeholder="Tu correo electrónico" required />
-      <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)" />
-
-      <textarea name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje..." required></textarea>
-
-      <!-- Configuración adicional -->
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://tusitio.github.io/gracias.html" />
-
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
+    <p>Para enviarnos un mensaje, haz clic en el botón y llena el formulario externo.</p>
+    <a class="boton-contacto" href="https://formsubmit.co/el/januhu" target="_blank">Ir al Formulario</a>
+  </main>
 
   <div class="ads-container">
     <!-- Anuncio responsivo de AdSense -->
@@ -165,5 +133,4 @@
     © 2025 Lumen Agencia Creativa. Todos los derechos reservados.
   </footer>
 </body>
-
-      </html>
+</html>
