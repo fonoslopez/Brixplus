@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Charades Teocrático" />
+    <meta name="theme-color" content="#0B61A4" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Charades Teocrático" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="icon" type="image/png" href="icons/icon-192.png" />
+    <title>Charades Teocrático</title>
+
+    <!-- 🔹 Script para pedir permiso de giroscopio en iOS -->
+    <script>
+      async function requestGyroscopePermission() {
+        if (
+          typeof DeviceMotionEvent !== "undefined" &&
+          typeof DeviceMotionEvent.requestPermission === "function"
+        ) {
+          try {
+            const response = await DeviceMotionEvent.requestPermission();
+            if (response === "granted") {
+              console.log("✅ Permiso de movimiento concedido");
+            } else {
+              alert(
+                "❌ Permiso de movimiento denegado. Actívalo en Ajustes > Safari > Movimiento y orientación."
+              );
+            }
+          } catch (e) {
+            console.error(e);
+          }
+        } else {
+          console.log("✅ Este navegador no requiere permiso");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>
